@@ -6,7 +6,7 @@ al [at] eartoearoak.com
 
 Monitor, plot and export data from CyrusTek ES51022 based multimeters such as the UNI-T UT61E.
 
-More details can be found [here](https://eartoearoak/software/es51922-viewer) and the code is [hosted on GitHub](https://github.com/EarToEarOak/ES51922-Viewer).
+More details can be found [here](https://eartoearoak.com/software/es51922-viewer) and the code is [hosted on GitHub](https://github.com/EarToEarOak/ES51922-Viewer).
 
 Tested with a UNI-T UT61E on:
 
