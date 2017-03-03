@@ -98,6 +98,7 @@ class Reader(QThread):
                     else:
                         self.warning.emit('Invalid data received')
                 QApplication.processEvents()
+            self._serial.close()
         except serial.SerialException as e:
             self.error.emit(e.message)
 
