@@ -31,7 +31,7 @@ from PySide.QtGui import QMainWindow, QComboBox, QWidget, QSizePolicy, \
 from es51922_viewer.comm import Comm
 from es51922_viewer.meter import Meter
 from es51922_viewer.ui import loadUi
-from es51922_viewer.utils import get_resource
+from es51922_viewer.utils import getResource
 from es51922_viewer.widget_lcd import WidgetLcd
 from es51922_viewer.widget_led import WidgetLed
 from es51922_viewer.widget_plot import WidgetPlot
@@ -70,9 +70,9 @@ class WindowMain(QMainWindow):
         self.toolbar.addWidget(widgetSpacer)
         self.toolbar.addWidget(self._comboSerial)
 
-        icon = QIcon(get_resource('record.png'))
+        icon = QIcon(getResource('record.png'))
         self.actionRecord.setIcon(icon)
-        icon = QIcon(get_resource('clear.png'))
+        icon = QIcon(getResource('clear.png'))
         self.actionClear.setIcon(icon)
 
     def __setupStatusbar(self):
@@ -125,6 +125,7 @@ class WindowMain(QMainWindow):
         port = self._comboSerial.currentText()
         self._comm.start(port, self.__onData, self.__onWarning, self.__onError)
         self.statusbar.showMessage('Started')
+        self._widgetPlot.enableAutoRange()
 
     def __stop(self):
         self.actionRecord.setChecked(False)

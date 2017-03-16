@@ -26,7 +26,7 @@
 from PySide.QtCore import QMetaObject
 from PySide.QtUiTools import QUiLoader
 
-from es51922_viewer.utils import get_resource
+from es51922_viewer.utils import getResource
 
 
 class UiLoader(QUiLoader):
@@ -62,7 +62,7 @@ class UiLoader(QUiLoader):
 
 def loadUi(instance, fileName):
     loader = UiLoader(instance)
-    uiFile = get_resource(fileName)
+    uiFile = getResource(fileName)
     widget = loader.load(uiFile)
     QMetaObject.connectSlotsByName(widget)
 

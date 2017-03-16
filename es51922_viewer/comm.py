@@ -26,12 +26,11 @@
 import time
 
 from PySide.QtCore import QThread, Signal, QTimer
-import serial
-from serial.tools import list_ports
-
+from PySide.QtGui import QApplication
 from es51922_viewer.meter import Meter
 from es51922_viewer.parser import Parser
-from PySide.QtGui import QApplication
+import serial
+from serial.tools import list_ports
 
 
 class Comm(object):

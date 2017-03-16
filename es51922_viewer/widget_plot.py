@@ -56,10 +56,10 @@ class WidgetPlot(pg.PlotWidget):
         self._label.hide()
         self.addItem(self._label, ignoreBounds=True)
 
-        self._curve.scene().sigMouseMoved.connect(self.__on_mouse)
+        self._curve.scene().sigMouseMoved.connect(self.__onMouse)
 
-    def __on_mouse(self, posMouse):
-        if len(self._timestamps):
+    def __onMouse(self, posMouse):
+        if not len(self.scene().dragButtons) and len(self._timestamps):
             pos = self.plotItem.vb.mapSceneToView(posMouse)
             index = min(range(len(self._timestamps)),
                         key=lambda i: abs(self._timestamps[i] - pos.x()))

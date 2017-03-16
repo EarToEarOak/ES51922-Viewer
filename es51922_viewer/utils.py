@@ -29,7 +29,7 @@ import sys
 import pkg_resources
 
 
-def get_resource(resource):
+def getResource(resource):
     if not hasattr(sys, 'frozen'):
         return pkg_resources.resource_filename('es51922_viewer.gui', resource)
     else:
