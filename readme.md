@@ -14,6 +14,7 @@ Tested with a UNI-T UT61E on:
 - Ubuntu 16.04 (x64)
 
 ## Installation ##
+This software requires [Python 2.7.x](https://www.python.org/) (this is installed by default on most Linux distributions).  Once Python is setup run the following command:
 
 `pip install es51922-viewer`
 
